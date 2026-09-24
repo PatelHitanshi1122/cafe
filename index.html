@@ -1,0 +1,496 @@
+<!-- Save as index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moon Cafe | South Indian & Italian Cuisine</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#fdf8f2;
+color:#333;
+}
+
+/* Header */
+
+header{
+background:#4e342e;
+padding:15px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:999;
+box-shadow:0 4px 10px rgba(0,0,0,.2);
+}
+
+.logo{
+font-size:32px;
+font-weight:700;
+color:#FFD54F;
+}
+
+nav a{
+color:#fff;
+text-decoration:none;
+margin-left:25px;
+font-weight:600;
+transition:.3s;
+}
+
+nav a:hover{
+color:#FFD54F;
+}
+
+/* Pages */
+
+.page{
+display:none;
+animation:fade .6s;
+padding:50px 8%;
+min-height:88vh;
+}
+
+.active{
+display:block;
+}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(20px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+/* Hero */
+
+.hero{
+height:80vh;
+background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1600&q=80");
+background-size:cover;
+background-position:center;
+border-radius:20px;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:#fff;
+padding:30px;
+}
+
+.hero h1{
+font-size:65px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:22px;
+margin-bottom:25px;
+}
+
+.btn{
+padding:14px 35px;
+background:#ff9800;
+color:white;
+border:none;
+border-radius:40px;
+cursor:pointer;
+font-size:18px;
+font-weight:bold;
+transition:.3s;
+}
+
+.btn:hover{
+background:#e65100;
+transform:scale(1.05);
+}
+
+.section-title{
+text-align:center;
+font-size:40px;
+color:#4e342e;
+margin-bottom:40px;
+}
+
+/* Cards */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,.1);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card h3{
+color:#6d4c41;
+margin-bottom:10px;
+}
+
+/* Menu */
+
+.menu-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:25px;
+}
+
+.menu-item{
+background:#fff;
+padding:20px;
+border-left:8px solid #ff9800;
+border-radius:10px;
+box-shadow:0 8px 15px rgba(0,0,0,.08);
+}
+
+.menu-item h3{
+display:flex;
+justify-content:space-between;
+margin-bottom:8px;
+color:#4e342e;
+}
+
+.price{
+color:#ff6f00;
+}
+
+/* Contact */
+
+.contact-box{
+background:white;
+padding:35px;
+max-width:700px;
+margin:auto;
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,.1);
+}
+
+input,textarea{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:1px solid #ccc;
+border-radius:8px;
+font-size:16px;
+}
+
+textarea{
+resize:none;
+}
+
+/* Footer */
+
+footer{
+background:#4e342e;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+}
+
+nav{
+margin-top:15px;
+}
+
+nav a{
+display:inline-block;
+margin:8px;
+}
+
+.hero h1{
+font-size:42px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+
+<div class="logo">🌙 Moon Cafe</div>
+
+<nav>
+<a href="#" onclick="showPage('home')">Home</a>
+<a href="#" onclick="showPage('about')">About</a>
+<a href="#" onclick="showPage('menu')">Menu</a>
+<a href="#" onclick="showPage('contact')">Contact</a>
+</nav>
+
+</header>
+
+<!-- HOME -->
+
+<section id="home" class="page active">
+
+<div class="hero">
+
+<div>
+
+<h1>Welcome to Moon Cafe</h1>
+
+<p>Experience the perfect blend of Authentic South Indian Delights & Italian Favorites.</p>
+
+<button class="btn" onclick="showPage('menu')">View Menu</button>
+
+</div>
+
+</div>
+
+<br><br>
+
+<h2 class="section-title">Why Moon Cafe?</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>☕ Premium Coffee</h3>
+<p>Enjoy authentic South Indian Filter Coffee prepared fresh every day.</p>
+</div>
+
+<div class="card">
+<h3>🥘 Fresh Ingredients</h3>
+<p>Every dish is made using high-quality fresh vegetables and spices.</p>
+</div>
+
+<div class="card">
+<h3>🍕 Two Delicious Worlds</h3>
+<p>Traditional South Indian cuisine meets classic Italian comfort food.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about" class="page">
+
+<h2 class="section-title">About Moon Cafe</h2>
+
+<p style="font-size:18px;line-height:2;text-align:center;max-width:900px;margin:auto;">
+
+Moon Cafe is a cozy family-friendly café that combines the rich flavors of South India with
+popular Italian dishes. Whether you're craving crispy dosas, fluffy idlis, creamy pasta,
+or wood-fired pizza, our chefs prepare every meal with passion and fresh ingredients.
+Our warm ambiance, delicious food, and excellent service make Moon Cafe the perfect place
+to enjoy breakfast, lunch, dinner, or coffee with family and friends.
+
+</p>
+
+<br><br>
+
+<div class="grid">
+
+<div class="card">
+<h3>🌿 Fresh & Healthy</h3>
+<p>Prepared daily with fresh ingredients and traditional recipes.</p>
+</div>
+
+<div class="card">
+<h3>🍽 Comfortable Dining</h3>
+<p>A relaxing atmosphere for friends, families, and couples.</p>
+</div>
+
+<div class="card">
+<h3>❤️ Friendly Service</h3>
+<p>Our team ensures every customer leaves with a smile.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- MENU -->
+
+<section id="menu" class="page">
+
+<h2 class="section-title">Our Menu</h2>
+
+<h2 style="margin-bottom:20px;color:#6d4c41;">🥥 South Indian Specials</h2>
+
+<div class="menu-grid">
+
+<div class="menu-item">
+<h3>Masala Dosa <span class="price">₹140</span></h3>
+<p>Crispy dosa stuffed with potato masala.</p>
+</div>
+
+<div class="menu-item">
+<h3>Plain Dosa <span class="price">₹110</span></h3>
+<p>Golden crispy dosa with chutney & sambar.</p>
+</div>
+
+<div class="menu-item">
+<h3>Idli (2 pcs) <span class="price">₹70</span></h3>
+<p>Soft steamed idlis with fresh chutney.</p>
+</div>
+
+<div class="menu-item">
+<h3>Medu Vada <span class="price">₹80</span></h3>
+<p>Crispy lentil vada served with sambar.</p>
+</div>
+
+<div class="menu-item">
+<h3>Onion Uttapam <span class="price">₹130</span></h3>
+<p>Soft thick pancake topped with onions.</p>
+</div>
+
+<div class="menu-item">
+<h3>Filter Coffee <span class="price">₹50</span></h3>
+<p>Authentic South Indian coffee.</p>
+</div>
+
+</div>
+
+<br><br>
+
+<h2 style="margin-bottom:20px;color:#6d4c41;">🍕 Italian Favorites</h2>
+
+<div class="menu-grid">
+
+<div class="menu-item">
+<h3>Margherita Pizza <span class="price">₹299</span></h3>
+<p>Fresh mozzarella, basil & tomato sauce.</p>
+</div>
+
+<div class="menu-item">
+<h3>Veg Supreme Pizza <span class="price">₹399</span></h3>
+<p>Loaded with vegetables & cheese.</p>
+</div>
+
+<div class="menu-item">
+<h3>White Sauce Pasta <span class="price">₹249</span></h3>
+<p>Creamy pasta with herbs and vegetables.</p>
+</div>
+
+<div class="menu-item">
+<h3>Red Sauce Pasta <span class="price">₹229</span></h3>
+<p>Classic Italian tomato sauce pasta.</p>
+</div>
+
+<div class="menu-item">
+<h3>Garlic Bread <span class="price">₹149</span></h3>
+<p>Fresh baked garlic bread with herbs.</p>
+</div>
+
+<div class="menu-item">
+<h3>Cold Coffee <span class="price">₹120</span></h3>
+<p>Refreshing chilled coffee topped with cream.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact" class="page">
+
+<h2 class="section-title">Contact Us</h2>
+
+<div class="contact-box">
+
+<form>
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Email Address">
+
+<input type="text" placeholder="Phone Number">
+
+<textarea rows="6" placeholder="Write your message..."></textarea>
+
+<button class="btn">Send Message</button>
+
+</form>
+
+<br>
+
+<h3>📍 Address</h3>
+<p>Moon Cafe, MG Road, Bengaluru, Karnataka</p>
+
+<br>
+
+<h3>📞 Phone</h3>
+<p>+91 98765 43210</p>
+
+<br>
+
+<h3>📧 Email</h3>
+<p>hello@mooncafe.com</p>
+
+<br>
+
+<h3>🕒 Opening Hours</h3>
+<p>Monday - Sunday : 8:00 AM - 10:30 PM</p>
+
+</div>
+
+</section>
+
+<footer>
+
+<h3>🌙 Moon Cafe</h3>
+<p>Authentic South Indian & Italian Cuisine</p>
+<p>© 2026 Moon Cafe. All Rights Reserved.</p>
+
+</footer>
+
+<script>
+
+function showPage(page){
+
+document.querySelectorAll(".page").forEach(function(section){
+section.classList.remove("active");
+});
+
+document.getElementById(page).classList.add("active");
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+}
+
+</script>
+
+</body>
+</html>
